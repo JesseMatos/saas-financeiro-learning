@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale-1" />
+    <title>SaaS Aprendizado - Aula 1</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        button { padding: 10px 14px; font-size: 16px; cursor: pointer; }
+        #contador { font-weight: bold; margin-left: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Olá, Jesse - página interativa</h1>
+
+    <p>
+        Clique no botão para ver a interação em JavaScript:
+        <button id="meuBotao">Clique em mim</button>
+        <span id="contador">0</span>
+    </p>
+
+    <script>
+        const botao = document.getElementById('meuBotao');
+        const contadorSpan = document.getElementById('contador');
+        let contador = 0;
+
+        function aoClicar() {
+            contador = contador + 1;
+            contadorSpan.textContent = contador;
+            if (contador === 5) {
+                botao.textContent = 'Você chegou a 5!';
+            }
+        }
+
+        botao.addEventListener('click', aoClicar);
+    </script>
+</body>
+</html>
